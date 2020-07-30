@@ -10,7 +10,7 @@
 KityMinder.registerUI('topbar/title', function(minder) {
     var $title = $('<h1>').appendTo('#panel');
     var $doc = minder.getUI('doc');
-    var finder = minder.getUI('widget/netdiskfinder');
+    // var finder = minder.getUI('widget/netdiskfinder');
     var notice = minder.getUI('widget/notice');
     var renameEnabled = false;
     var renameMode = false;
@@ -79,7 +79,7 @@ KityMinder.registerUI('topbar/title', function(minder) {
             }).then(function() {
                 doc.path = newPath;
                 doc.title = newFilename;
-                finder.fire('mv', oldPath, newPath);
+                // finder.fire('mv', oldPath, newPath);
                 notice.info(minder.getLang('ui.rename_success', newFilename));
             })['catch'](function(e) {
                 notice.error('err_rename', e);

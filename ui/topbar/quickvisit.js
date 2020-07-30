@@ -52,7 +52,7 @@ KityMinder.registerUI('topbar/quickvisit', function (minder) {
         }
 
         function quickSave() {
-            minder.getUI('menu/save/netdisk').quickSave();
+            minder.getUI('menu/save/api').quickSave();
         }
 
         function quickShare() {

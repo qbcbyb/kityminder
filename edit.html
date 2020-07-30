@@ -8,8 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>百度脑图 - 便捷的思维编辑工具</title>
+    
+    <script type="text/javascript">
+        SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function(toElement) {
+            return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+        };
+    </script>
 
     <script src="import.js?pack=edit" charset="utf-8"></script>
+    
+    <script type="text/javascript">
+        fio.user.login = Function.prototype;
+    </script>
+
     <script src="kityminder.config.js" charset="utf-8"></script>
     <script src="lang/zh-cn/zh-cn.js" charset="utf-8"></script>
     

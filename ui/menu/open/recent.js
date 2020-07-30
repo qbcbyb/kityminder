@@ -15,13 +15,13 @@ KityMinder.registerUI('menu/open/recent', function(minder) {
     var frdTime = minder.getUI('widget/friendlytimespan');
     var doc = minder.getUI('doc');
     var recentList = minder.getUI('widget/locallist').use('recent');
-    var finder = minder.getUI('widget/netdiskfinder');
+    // var finder = minder.getUI('widget/netdiskfinder');
 
     /* 网盘面板 */
     var $panel = $($open.createSub('recent')).addClass('recent-file-panel');
 
     minder.on('uiready', function() {
-        minder.getUI('topbar/user').requireLogin($panel);
+        // minder.getUI('topbar/user').requireLogin($panel);
     });
 
     /* 标题 */
@@ -60,7 +60,7 @@ KityMinder.registerUI('menu/open/recent', function(minder) {
     doc.on('docload', addToList);
     doc.on('docsave', addToList);
 
-    finder.on('mv', trackFileMove);
+    // finder.on('mv', trackFileMove);
 
     renderList();
 

@@ -16,7 +16,7 @@ KityMinder.registerUI('menu/share/share', function(minder) {
         .appendTo($manage_menu);
     var $doc = minder.getUI('doc');
     var notice = minder.getUI('widget/notice');
-    var finder = minder.getUI('widget/netdiskfinder');
+    // var finder = minder.getUI('widget/netdiskfinder');
 
     var BACKEND_URL = 'http://naotu.baidu.com/share.php';
 
@@ -36,7 +36,7 @@ KityMinder.registerUI('menu/share/share', function(minder) {
     shareListLoaded.then(bindManageActions);
 
     minder.on('uiready', function() {
-        minder.getUI('topbar/user').requireLogin($manage_menu);
+        // minder.getUI('topbar/user').requireLogin($manage_menu);
     });
 
     $doc.on('docload', function(doc) {
@@ -74,7 +74,7 @@ KityMinder.registerUI('menu/share/share', function(minder) {
         }
     });
 
-    finder.on('mv', trackFileMove);
+    // finder.on('mv', trackFileMove);
 
     function trackFileMove(from, to) {
         var fromPath = from.split('/');

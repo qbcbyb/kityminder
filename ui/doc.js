@@ -13,9 +13,9 @@ KityMinder.registerUI('doc', function(minder) {
     var current = { saved: true };
     var loading = false;
     var notice = minder.getUI('widget/notice');
-    var finder = minder.getUI('widget/netdiskfinder');
+    // var finder = minder.getUI('widget/netdiskfinder');
 
-    if (finder) finder.on('mv', trackFileMove);
+    // if (finder) finder.on('mv', trackFileMove);
 
     function trackFileMove(from, to) {
 
